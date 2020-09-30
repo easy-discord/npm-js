@@ -1,6 +1,6 @@
 {
     "name": "@dxy_seer/projzjs",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "The Project Z API library for Node.js!",
     "license": "MIT",
     "repository": "dxy-Seer/npm-projectz",
