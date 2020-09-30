@@ -1,14 +1,17 @@
 {
-    "name": "@dxy_seer/projzjs",
-    "version": "1.0.2",
-    "description": "The Project Z API library for Node.js!",
-    "license": "MIT",
-    "repository": "dxy-Seer/npm-projectz",
-    "main": "core-projz.js",
-    "keywords": [
-      "projz",
-      "npm",
-      "Project Z",
-      "API"
-    ]
+  "name": "@dxy_seer/projzjs",
+  "version": "1.0.3",
+  "description": "The Project Z API library for Node.js!",
+  "license": "MIT",
+  "repository": "dxy-Seer/npm-projectz",
+  "main": "core-projz.js",
+  "keywords": [
+    "projz",
+    "npm",
+    "Project Z",
+    "API"
+  ],
+  "dependencies": {
+    "https": "^1.0.0"
   }
+}
