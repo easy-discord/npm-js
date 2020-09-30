@@ -1,6 +1,8 @@
 module.exports = { // test commands...
-    hello: function(subject) {
-        console.log('Jupiter says hello ' + subject);
+    get: function(subject) {
+        circles: {
+            console.log('circles');
+        }
       },
     hw: function(subject) {
     console.log('Jupiter says hello ' + subject);
