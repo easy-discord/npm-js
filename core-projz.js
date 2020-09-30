@@ -11,7 +11,7 @@ module.exports = {
                     data += chunk;
                 });
                 resp.on('end', () => {
-                    console.log(JSON.parse(data).countryCode);
+                    console.log(JSON.parse(data).explanation);
                 });
 
                 }).on("error", (err) => {
