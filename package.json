@@ -1,0 +1,14 @@
+{
+    "name": "@dxy-Seer/projz-JS",
+    "version": "1.0.0",
+    "description": "The Project Z API library for Node.js!",
+    "license": "MIT",
+    "repository": "dxy-Seer/npm-projectz",
+    "main": "core-projz.js",
+    "keywords": [
+      "projz",
+      "npm",
+      "Project Z",
+      "API"
+    ]
+  }
