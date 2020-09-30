@@ -1,10 +1,10 @@
 module.exports = { // test commands...
     get: function(subject) {
-        circles: {
-            console.log('circles');
+        if(subject == 'regions'){
+            console.log('Reeegiooons!');
         }
       },
     hw: function(subject) {
-    console.log('Jupiter says hello ' + subject);
+    console.log('Input: ' + subject);
     }
   };
