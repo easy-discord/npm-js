@@ -1,12 +1,12 @@
 
 
 module.exports = {
-    get: function(subject) {
-        if(subject == 'regions'){
+    get: function(arg) {
+        if(arg == 'regions'){
 
         }
       },
-    log: function(subject) {
-    console.log(subject);
+    log: function(arg) {
+    console.log(arg);
     }
   };
