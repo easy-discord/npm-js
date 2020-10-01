@@ -1,19 +1,16 @@
 {
-  "name": "@dxy_seer/projzjs",
-  "version": "1.1.0",
-  "description": "The Project Z API library for Node.js!",
+  "name": "@dxy_seer/easydiscord",
+  "version": "0.0.1",
+  "description": "Make discord bots with ease!!",
   "license": "MIT",
-  "repository": "dxy-Seer/npm-projectz",
-  "main": "core-projz.js",
+  "repository": "easy-discord/npm-js",
+  "main": "core-easy-dis.js",
   "keywords": [
-    "projz",
+    "discord.js",
     "npm",
-    "Project Z",
+    "Discord Bot",
     "API"
   ],
   "dependencies": {
-    "http": "0.0.1-security",
-    "https": "^1.0.0",
-    "request": "^2.88.2"
   }
 }

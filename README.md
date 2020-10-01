@@ -1,2 +1,1 @@
 # Easy Discord
-"# npm-js" 
