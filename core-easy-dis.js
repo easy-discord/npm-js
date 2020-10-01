@@ -1,4 +1,5 @@
 const discord = require('discord.js');
+// Created by: Seer#6054
 const bot = new discord.Client();
 var modulename = "ED";
 module.exports = {
