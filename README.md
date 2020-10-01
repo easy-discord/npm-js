@@ -1,1 +1,2 @@
-# npm-projz
+# Easy Discord
+"# npm-js" 
