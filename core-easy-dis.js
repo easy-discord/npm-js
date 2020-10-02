@@ -41,6 +41,34 @@ module.exports = {
           }
           });
         }
+    },
+    // message //
+    // Status
+    status: function(StatusType, Content) {
+      if(Content == '') {
+        this.log(`We can't send a empty status...`)
+      } else {
+        bot.on('ready', () => {
+          var status = Content;
+          if(StatusType == 'WATCHING'){
+            var STATE = 'WATCHING'
+          } else if(StatusType == 'PLAYING'){
+            var STATE = 'PLAYING'
+          }else if(StatusType == 'LISTENING'){
+            var STATE = 'LISTENING'
+          }
+          bot.user.setActivity(status, 
+            { 
+              type: STATE
+            }
+            );
+      });
+      }
+    },
+    // Status //
+    // Kill
+    kill: function(){
+      process.exit();
     }
-    
+    // Kill //
   };
