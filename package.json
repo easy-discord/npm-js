@@ -1,6 +1,6 @@
 {
   "name": "@dxy_seer/easydiscord",
-  "version": "0.0.6",
+  "version": "0.0.4",
   "description": "Make discord bots with ease!!",
   "license": "MIT",
   "repository": "easy-discord/npm-js",
