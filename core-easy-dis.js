@@ -1,5 +1,6 @@
 const discord = require('discord.js');
 // Created by: Seer#6054
+// Seer's favorite color: #22e238
 const bot = new discord.Client();
 var modulename = "ED";
 module.exports = {
@@ -22,16 +23,16 @@ module.exports = {
     },
     // login //
     // message 
-    send: function(type, activator, content) {
+    send: function(type, Command, content) {
         if(type == ''){
           this.log('Please select a type! (channel/reply)');
         } else if(content == ''){
           this.log(`I cant send an empty message!`);
-        } else if(activator == '') {
+        } else if(Command == '') {
           this.log('No command defined');
         }else {
           bot.on("message", function(message) {
-          if (message.content === activator) {
+          if (message.content === Command) {
             if(type == 'reply'){
               message.reply(content);
             } 
@@ -66,8 +67,31 @@ module.exports = {
       }
     },
     // Status //
+    // Embed
+    embed: function(Color, Command, Title, Content) {
+      if(Title == ''){
+        this.log('An invalid title was provided.');
+      }else if(Content == ''){
+        this.log(`We can't send a empty embed...`)
+      }else{
+        bot.on("message", function(message) {
+          if (message.content === Command) {
+            const EDembed = new discord.MessageEmbed();
+            EDembed.addField(`${Title}`, `${Content}`);
+          if(Color == ''){
+            EDembed.setColor('');
+          }else{
+            EDembed.setColor(`${Color}`);
+          }
+          message.channel.send(EDembed);
+         }
+        });
+      }
+    },
+    // Embed //
     // Kill
     kill: function(){
+      this.log('The project was killed.')
       process.exit();
     }
     // Kill //
