@@ -50,5 +50,5 @@ These are all the commands!
 ```
 
 ### DANGER
-cli.kill();
+cli.kill(`OwnerID`);
 This stop the **node.js** app.

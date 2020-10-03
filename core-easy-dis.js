@@ -1,4 +1,5 @@
 const discord = require('discord.js');
+const { log } = require('../../../../NPM/core-easy-dis');
 // Created by: Seer#6054
 // Seer's favorite color: #22e238
 const bot = new discord.Client();
@@ -95,10 +96,42 @@ module.exports = {
         });
       }
     },
+    kick: function(){
+
+    },
+    ban: function(Command, SuccessMsg){
+    bot.on("message", function(message) {
+    if (message.content === Command) {
+      if(message.member.hasPermission(`BAN_MEMBERS`)){
+          message.members.mentions.first().ban();
+            if(SuccessMsg == ''){
+              message.reply('Member was successfully banned!');
+            } else {
+              message.reply(SuccessMsg);
+            }
+      } else {
+        message.reply('Error, You don\'t have the following permissions: `BAN_MEMBERS`.');
+      }
+    }
+    });
+    },
     // Kill
-    kill: function(){
-      this.log('The project was killed.')
-      process.exit();
+    kill: function(Command, OwnerId){
+      bot.on("message", function(message) {
+        if (message.content === Command) {
+          if(OwnerId == ``){
+            this.log(`I could not perform the following command: kill`);
+            this.log(`This is becuase you did not specify the bot owner...`);
+          } else if(OwnerId == message.author.id){
+            message.reply(`**Bot shutting down!**`);
+            setTimeout(ExecuteKill, 3000);
+            function ExecuteKill(){
+              process.exit();
+            }  
+            
+          }
+        }
+      });
     }
     // Kill //
   };
