@@ -4,8 +4,16 @@ const discord = require('discord.js');
 const bot = new discord.Client();
 var modulename = "ED";
 module.exports = {
-    get: function(arg) {
-
+    inviteURL: function(BotID, Permissions) {
+      	if(BotID == ''){
+          this.log('Error, no BotID was provided...');
+        } else {
+          if(Permissions == ''){
+            return `https://discord.com/oauth2/authorize?client_id=${BotID}&scope=bot&permissions=8`;
+          } else {
+            return `https://discord.com/oauth2/authorize?client_id=${BotID}&scope=bot&permissions=${Permissions}`;
+          }
+        }
       },
       // log 
     log: function(arg) {
@@ -67,7 +75,6 @@ module.exports = {
       }
     },
     // Status //
-    // Embed
     embed: function(Color, Command, Title, Content) {
       if(Title == ''){
         this.log('An invalid title was provided.');
@@ -88,7 +95,6 @@ module.exports = {
         });
       }
     },
-    // Embed //
     // Kill
     kill: function(){
       this.log('The project was killed.')
