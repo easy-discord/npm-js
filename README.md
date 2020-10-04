@@ -49,6 +49,9 @@ Help Center
 These are all the commands!
 ```
 
+cli.inviteURL(`BOTID`, '8')
+Will display: an invite link with admin perms.
+
 ### DANGER
 cli.kill(`OwnerID`);
 This stop the **node.js** app.

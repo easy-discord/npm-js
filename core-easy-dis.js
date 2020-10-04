@@ -1,8 +1,8 @@
 const discord = require('discord.js');
-const { log } = require('../../../../NPM/core-easy-dis');
 // Created by: Seer#6054
 // Seer's favorite color: #22e238
 const bot = new discord.Client();
+const ED_pack = require('@dxy_seer/easydiscord/package.json');
 var modulename = "ED";
 module.exports = {
     inviteURL: function(BotID, Permissions) {
@@ -17,8 +17,8 @@ module.exports = {
         }
       },
       // log 
-    log: function(arg) {
-        console.log(`${modulename} -> ` + arg);
+    log: function(Content) {
+        console.log(`${modulename} -> ` + Content);
     },
     // log //
     // login
@@ -132,6 +132,11 @@ module.exports = {
           }
         }
       });
-    }
+    },
     // Kill //
+    // Version
+    version: function() {
+      return ED_pack.version + " - [EasyDiscord](https://easydiscord.glitch.me)";
+    }
+    // Version //
   };
