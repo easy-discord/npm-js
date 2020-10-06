@@ -49,7 +49,7 @@ Help Center
 These are all the commands!
 ```
 
-cli.inviteURL(`BOTID`, '8')
+cli.inviteURL(`BOT-ID`, '8')
 Will display: an invite link with admin perms.
 
 ### DANGER

@@ -4,6 +4,7 @@ const discord = require('discord.js');
 const bot = new discord.Client();
 const ED_pack = require('@dxy_seer/easydiscord/package.json');
 var modulename = "ED";
+var color_green = "#22e238";
 module.exports = {
     inviteURL: function(BotID, Permissions) {
       	if(BotID == ''){
