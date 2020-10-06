@@ -136,7 +136,7 @@ module.exports = {
     // Kill //
     // Version
     version: function() {
-      return ED_pack.version + " - [EasyDiscord](https://easydiscord.glitch.me)";
+      return ED_pack.version + ` - [EasyDiscord](https://easydiscord.glitch.me)`; // Version + Site link
     }
     // Version //
   };
