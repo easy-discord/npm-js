@@ -25,7 +25,7 @@ cli.send(`channel`, `${prefix}dev`, `My developer is: ${dev}`);
 cli.send(`channel`, `${prefix}version`, `Current package version i am running on: ${pack.version}`);
 cli.login('TOKEN');
 ```
-#### Options
+#### Commands
 cli.log('Hello world') 
 Will display: ED -> Hello world
 
@@ -51,6 +51,15 @@ These are all the commands!
 
 cli.inviteURL(`BOT-ID`, '8')
 Will display: an invite link with admin perms.
+
+### Events
+
+cli.event.channelCreate(`Channel created: `);
+Will display: Channel created: (Channel id) <- IN LOGS
+
+cli.event.channelDelete(`Channel deleted: `);
+Will display: Channel deleted: (Channel id) <- IN LOGS
+
 
 ### DANGER
 cli.kill(`OwnerID`);

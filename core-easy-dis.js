@@ -138,6 +138,26 @@ module.exports = {
     // Version
     version: function() {
       return ED_pack.version + ` - [EasyDiscord](https://easydiscord.glitch.me)`; // Version + Site link
+    },
+    event: {
+      channelCreate: function(logMessage) {
+        bot.on("channelCreate", function(channel){
+            if(logMessage == ''){
+                console.log(`${modulename} -> Channel Deleted: ${channel}`);
+              }else{
+                console.log(`${modulename} -> ${logMessage} ${channel}`);
+              }
+        });
+      },
+      channelDelete: function(logMessage){
+        bot.on("channelDelete", function(channel){
+          if(logMessage == ''){
+            console.log(`${modulename} -> Channel Deleted: ${channel}`)
+          }else{
+            console.log(`${modulename} -> ${logMessage} ${channel}`);
+          }
+        });
+      }
     }
     // Version //
   };
