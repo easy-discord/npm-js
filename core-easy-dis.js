@@ -5,6 +5,9 @@ const bot = new discord.Client();
 const ED_pack = require('@dxy_seer/easydiscord/package.json');
 var modulename = "ED";
 var color_green = "#22e238";
+const YouTubeNotifier = require('youtube-notification');
+var ed_dblSiteLink = "https://dbl-v1.glitch.me/";
+
 module.exports = {
     inviteURL: function(BotID, Permissions) {
       	if(BotID == ''){
@@ -97,8 +100,16 @@ module.exports = {
         });
       }
     },
-    kick: function(){
-
+    api: {
+      ed_dbl: {
+        embed: function(botId) {
+          if(botId == ''){
+            console.log(modulename + ' -> Invalid botId provided.')
+          }else{
+            return ed_dblSiteLink + 'api/embed/' + botId;
+          }
+        }
+      }
     },
     ban: function(Command, SuccessMsg){
     bot.on("message", function(message) {
@@ -137,7 +148,7 @@ module.exports = {
     // Kill //
     // Version
     version: function() {
-      return ED_pack.version + ` - [EasyDiscord](https://easydiscord.glitch.me)`; // Version + Site link
+      return ED_pack.version + ` - [EasyDiscord NPM](https://easydiscord.glitch.me/npm)`; // Version + Site link
     },
     event: {
       channelCreate: function(logMessage) {
