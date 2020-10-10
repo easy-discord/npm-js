@@ -60,6 +60,10 @@ Will display: Channel created: (Channel id) <- IN LOGS
 cli.event.channelDelete(`Channel deleted: `);
 Will display: Channel deleted: (Channel id) <- IN LOGS
 
+### api
+
+cli.api.ed_dbl(command, botid);
+Will display: discord bot site embed
 
 ### DANGER
 cli.kill(`OwnerID`);

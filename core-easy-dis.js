@@ -101,13 +101,17 @@ module.exports = {
       }
     },
     api: {
-      ed_dbl: {
-        embed: function(botId) {
-          if(botId == ''){
-            console.log(modulename + ' -> Invalid botId provided.')
-          }else{
-            return ed_dblSiteLink + 'api/embed/' + botId;
-          }
+      ed_dbl: function(command, botId) {
+        if(command == ''){
+          console.log(modulename + ` -> Please specify a command`)
+        }else if(botId == ''){
+          console.log(modulename + ` -> Please specify a botId`)
+        }else{
+          bot.on("message", function(message) {
+            if (message.content === command) {
+              message.channel.send(ed_dblSiteLink + 'api/embed/' + botId);
+           }
+          });
         }
       }
     },
